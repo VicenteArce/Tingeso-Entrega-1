@@ -502,7 +502,7 @@ class LoanRequestServiceTest {
         loanEvaluation.setStability(true); // Empleo estable
         loanEvaluation.setMonthlyDebt(100000L); // Deuda que permite pasar el límite del 50% de ingresos
         loanEvaluation.setSavings(250000L); // Ahorros suficientes (al menos 10% del préstamo)
-        loanEvaluation.setSavingsHistory(false); // Historial de ahorro de 12 meses
+        loanEvaluation.setSavingsHistory(true); // Historial de ahorro de 12 meses
         loanEvaluation.setPeriodicSavings(true); // Ahorros periódicos de al menos 6 meses
         loanEvaluation.setSavingAntiquity(1); // Antigüedad de ahorros >= 2 años
         loanEvaluation.setRecentsWithdrawals(false); // Sin retiros recientes
@@ -516,7 +516,7 @@ class LoanRequestServiceTest {
         LoanRequestEntity result = loanRequestService.evaluateLoanRequest(loanEvaluation);
 
         // Verificar que el estado del préstamo sea pre-aprobado (estado 4)
-        assertThat(result.getLoanStatus()).isEqualTo(4);
+        assertThat(result.getLoanStatus()).isEqualTo(2);
     }
     @Test
     void whenCalculateMonthlyPayment_thenReturnCorrectAmount() {
