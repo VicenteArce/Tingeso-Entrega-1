@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const prestaBancoServer = "localhost";
+const prestaBancoServer = "20.191.125.13";
 const prestaBancoPort = "80";
 
 export default axios.create({
