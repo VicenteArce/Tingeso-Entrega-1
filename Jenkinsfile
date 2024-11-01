@@ -24,7 +24,7 @@ pipeline{
             steps{
                 dir("Backend"){
                     script{
-                         withDockerRegistry(credentialsId: 'docker-credentials'){
+                         withDockerRegistry(credentialsId: 'docker-credentials') {
                             bat "docker build -t vicentearce/prestabanco-backend ."
                             bat "docker push vicentearce/prestabanco-backend"
                         }
