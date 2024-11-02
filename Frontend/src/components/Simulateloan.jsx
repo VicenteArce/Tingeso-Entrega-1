@@ -97,7 +97,7 @@ const Simulateloan = () => {
 
     return (
         <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
-            <Typography variant="h4" gutterBottom>
+            <Typography variant="h4" gutterBottom className="custom-typography">
                 Simular Préstamo
             </Typography>
             {/* Ícono de información en la esquina superior derecha */}

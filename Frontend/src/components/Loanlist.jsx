@@ -102,7 +102,7 @@ const Loanlist = () => {
 
   return (
     <Box sx={{ p: 3 }}>
-      <Typography variant="h4" gutterBottom>
+      <Typography variant="h4" gutterBottom className="custom-typography">
         Lista de Solicitudes
       </Typography>
       <Button variant="contained" onClick={toggleFilter} sx={{ mb: 2 }}>

@@ -44,7 +44,9 @@ const Login = () => {
     return (
         <Container component="main" maxWidth="xs">
             <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: 8 }}>
-                <Typography component="h1" variant="h5">Iniciar Sesión</Typography>
+                <Typography component="h1" variant="h5" className="custom-typography">
+                    Iniciar Sesión
+                </Typography>
                 <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
                     <TextField
                         variant="outlined"
@@ -71,6 +73,7 @@ const Login = () => {
                         autoComplete="current-password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        
                     />
                     {error && (
                         <Typography color="error" variant="body2">{error}</Typography>

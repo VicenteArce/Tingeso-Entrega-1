@@ -39,6 +39,17 @@ const Evaluateloan = () => {
         });
     };
 
+    const documentTypeTranslations = {
+        incomeProof: "Comprobante de ingresos",
+        appraisalCertificate: "Certificado de avalúo",
+        creditHistory: "Historial crediticio",
+        deedFirstHome: "Escritura de la primera vivienda",
+        businessPlan: "Plan de negocios",
+        financialStatement: "Estado financiero del negocio",
+        renovationBudget: "Presupuesto de la remodelación",
+        updatedAppraisal: "Certificado de avalúo actualizado"
+    };
+    
     const fetchDocuments = async () => {
         try {
             const response = await documentsService.getDocumentsByLoanRequestId(loanRequestId);
@@ -88,6 +99,9 @@ const Evaluateloan = () => {
 
     return (
         <Box component="form" onSubmit={handleEvaluateLoan} sx={{ p: 3, maxWidth: 600, margin: "auto" }}>
+            <Typography variant="h4" gutterBottom className="custom-typography">
+                Evaluar Solicitud de Crédito
+            </Typography>
             {alertMessage && <Alert severity={alertType}>{alertMessage}</Alert>}
             <TextField
                 label="ID de Solicitud de Crédito"
@@ -246,8 +260,8 @@ const Evaluateloan = () => {
 
             <Typography variant="h6" sx={{ mt: 3 }}>Documentos</Typography>
             {documents.map((doc, index) => (
-                <Box key={index} sx={{ display: "flex", alignItems: "center", mt: 1 }}>
-                    <Typography sx={{ mr: 2 }}>{doc.type}</Typography>
+                <Box key={index} sx={{ display: "flex", alignItems: "center", mt: 1, justifyContent:"space-between"}}>
+                    <Typography sx={{ mr: 2 }}>{documentTypeTranslations[doc.type] || doc.type}</Typography>
                     <Button
                         variant="contained"
                         color="primary"

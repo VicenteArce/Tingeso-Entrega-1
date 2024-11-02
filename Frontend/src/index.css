@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #242323;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -52,7 +52,37 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.custom-typography {
+  color: #646cff; /* Define el color global */
+  font-size: 2rem !important; /* Tamaño del texto */
+  font-weight: bold !important; /* Negrita */
 
+}
+
+/*
+.MuiAppBar-root {
+  background-color: var(--primary-color) !important; 
+}
+*/
+.MuiOutlinedInput-root {
+  color: #e0dede !important;
+  
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+  border-color: #ffffff !important;
+}
+
+
+.MuiInputLabel-root {
+  color: #929292 !important; /* Cambia el color del label */
+}
+
+.MuiFormHelperText-root {
+  color: #ffffff !important; /* Cambia el color */
+  font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -64,5 +94,25 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+
+  .MuiOutlinedInput-root {
+    color: #1f1f1f !important;
+    
+  }
+  
+  .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: #000000 !important;
+  }
+  
+  
+  .MuiInputLabel-root {
+    color: #2e2e2e !important; /* Cambia el color del label */
+  }
+
+  .MuiFormHelperText-root {
+    color: #000000 !important; /* Cambia el color */
+    font-size: 0.9rem; /* Ajusta el tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
   }
 }
