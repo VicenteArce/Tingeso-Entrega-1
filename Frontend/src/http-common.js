@@ -1,10 +1,9 @@
 import axios from "axios";
 
-const prestaBancoServer = "20.191.125.13";
-const prestaBancoPort = "80";
+const prestaBancoServer = "prestabanco-tingeso-app.westus2.cloudapp.azure.com";
 
 export default axios.create({
-    baseURL: `http://${prestaBancoServer}:80`,
+    baseURL: `http://${prestaBancoServer}`,
     headers: {
         "Content-type": "application/json"
     }
