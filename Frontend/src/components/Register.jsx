@@ -60,18 +60,7 @@ const Register = () => {
     // Validación del año (1930 - Año Actual)
     const handleBirthYearChange = (e) => {
         const year = e.target.value.replace(/\D/g, '').slice(0, 4);
-    
-        // Permitir ingreso parcial hasta alcanzar 4 dígitos
-        if (year.length < 4) {
-            setBirthYear(year);
-            return;
-        }
-    
-        // Aplicar la validación de rango solo cuando el año tiene 4 dígitos
-        const yearNumber = parseInt(year, 10);
-        if (yearNumber >= 1930 && yearNumber <= currentYear) {
-            setBirthYear(year);
-        }
+        setBirthYear(year);
     };
 
     const handleMonthlyIncomeChange = (e) => {

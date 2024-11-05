@@ -49,8 +49,6 @@ public class LoanRequestService {
     }
 
 
-
-
     // Method to get all loan requests
 
     /**
