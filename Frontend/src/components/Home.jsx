@@ -2,7 +2,7 @@ const Home = () => {
     return (
       <div>
         <h1>PrestaBanco</h1>
-        <p>Hola, ¡Bienvenido a PrestaBanco!</p>
+        <p>¡Bienvenido a PrestaBanco!</p>
       </div>
     );
   };
