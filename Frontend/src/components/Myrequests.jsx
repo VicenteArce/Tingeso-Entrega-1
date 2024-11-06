@@ -139,7 +139,7 @@ const LoanRequestList = () => {
   return (
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" gutterBottom className="custom-typography">
-        Mis Solicitudes
+        Mis Solicitudes en Chile
       </Typography>
       <Button
         variant="contained"
