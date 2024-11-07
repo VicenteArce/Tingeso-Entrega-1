@@ -184,7 +184,7 @@ const Simulateloan = () => {
             </FormControl>
 
             <Button type="submit" variant="contained" startIcon={<SendIcon />}>
-                Simular
+                Simular crédito
             </Button>
 
             {error && <Alert severity="error" sx={{ mt: 2 }}>{error}</Alert>}
